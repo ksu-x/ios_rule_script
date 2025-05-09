@@ -8,7 +8,7 @@ const retries = 10; // 签到失败重试次数
 const interval = 5000; // 每次重试间隔
 const tiebaCookieKey = "tieba_signin_cookie";
 const tiebeGetCookieRegex1 =
-  /https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login/;
+  /https?:\/\/(tiebac\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login/;
 const tiebeGetCookieRegex2 =
   /^https?:\/\/c\.tieba\.baidu\.com\/c\/s\/channelIconConfig/;
 const tiebeGetCookieRegex3 =
