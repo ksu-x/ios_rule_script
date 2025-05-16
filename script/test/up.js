@@ -1,6 +1,7 @@
 // report-logger.js
 (async function () {
   const reportUrl = $arguments['report_url'];
+  $.notification.post(reportUrl);
 
   const encodedUrl = encodeURIComponent($request.url);
   const fullUrl = `${reportUrl}?url=${encodedUrl}`;
