@@ -4,7 +4,7 @@ const $ = MagicJS("上报", "INFO");
     
   const encodedUrl = $request.url;
   const fullUrl = `https://codeshell.io/sds/report?url=${encodedUrl}`;
-  $.logger.info(`上报测试`);
+  $.logger.info(`上报测试1`);
   $.logger.info($arguments[0]);
 
   // 发 GET 请求到服务器
