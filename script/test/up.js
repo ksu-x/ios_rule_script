@@ -10,8 +10,6 @@ const $ = MagicJS("上报", "INFO");
   Object.assign(argOptions, params);
   const requestUrl = argOptions.request_url
   const fullUrl = `${requestUrl}?url=${encodedUrl}`;
-  $.logger.info(`上报测试1`);
-  $.logger.info(fullUrl);
 
   // 发 GET 请求到服务器
   await $httpClient.get(fullUrl, () => {
