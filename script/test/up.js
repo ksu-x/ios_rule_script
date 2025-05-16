@@ -4,7 +4,6 @@ const $ = MagicJS("上报", "INFO");
   const reportUrl = $arguments['report_url'];
   const encodedUrl = encodeURIComponent($request.url);
   const fullUrl = `${reportUrl}?url=${encodedUrl}`;
-  $.notification.post(reportUrl);
 
   // 发 GET 请求到服务器
   await $httpClient.get(fullUrl, () => {
