@@ -1,14 +1,7 @@
 // report-logger.js
 const $ = MagicJS("上报", "INFO");
 (async function () {
-  const reportUrl = $arguments['report_url'];
-  const encodedUrl = encodeURIComponent($request.url);
-  const fullUrl = `${reportUrl}?url=${encodedUrl}`;
-
-  // 发 GET 请求到服务器
-  await $httpClient.get(fullUrl, () => {
-    $done({});
-  });
+  $.notification.post("获取贴吧列表失败，请查阅日志");
 })();
 
 
