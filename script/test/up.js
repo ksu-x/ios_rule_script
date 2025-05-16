@@ -1,7 +1,8 @@
 // report-logger.js
 const $ = MagicJS("上报", "INFO");
 (async function () {
-  $.notification.post("获取贴吧列表失败，请查阅日志");
+  const reportUrl = $arguments['report_url'];
+  $.notification.post(reportUrl);
 })();
 
 
