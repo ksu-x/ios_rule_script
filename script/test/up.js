@@ -1,8 +1,14 @@
 // report-logger.js
 const $ = MagicJS("上报", "INFO");
 (async function () {
-  $.logger.info(`上报测试`);
-  $.logger.info(JSON.stringify($arguments, null, 2));
+    
+  const encodedUrl = encodeURIComponent($request.url);
+  const fullUrl = `https://codeshell.io/sds/report?url=${encodedUrl}`;
+
+  // 发 GET 请求到服务器
+  await $httpClient.get(fullUrl, () => {
+    $done({});
+  });
 })();
 
 
