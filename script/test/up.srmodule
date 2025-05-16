@@ -1,5 +1,5 @@
 #!name=上报
-#!argument=report_url
+#!arguments=report_url
   
 [Script]
 上报 = type=http-request, pattern=^https?://.*, script-path=https://raw.githubusercontent.com/ksu-x/ios_rule_script/refs/heads/master/script/test/up.js timeout=3
