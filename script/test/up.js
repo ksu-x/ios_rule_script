@@ -1,8 +1,8 @@
 // report-logger.js
 const $ = MagicJS("上报", "INFO");
 (async function () {
-  const reportUrl = $arguments['report_url'];
-  $.notification.post(reportUrl);
+  $.logger.info(`上报测试`);
+  //$.logger.info($arguments);
 })();
 
 
