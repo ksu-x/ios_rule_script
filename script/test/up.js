@@ -21,7 +21,7 @@
   };
 
   // 你自己的接收服务器地址（支持 GET/POST）
-  const reportUrl = `https://your-server.com/report`;
+  const reportUrl = $arguments['report_url']
 
   // 用 POST 上报（推荐）
   await $httpClient.post(reportUrl, {
