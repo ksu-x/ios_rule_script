@@ -2,7 +2,7 @@
 const $ = MagicJS("上报", "INFO");
 (async function () {
   $.logger.info(`上报测试`);
-  //$.logger.info($arguments);
+  $.logger.info($arguments);
 })();
 
 
