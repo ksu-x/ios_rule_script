@@ -3,6 +3,9 @@ const $ = MagicJS("上报", "INFO");
 (async function () {
     
   const encodedUrl = $request.url;
+  const argOptions = {
+     request_url: "",
+  };
   const params = Object.fromEntries($argument.split('&').map(item => item.split('=')));
   Object.assign(argOptions, params);
   const requestUrl = argOptions.request_url
