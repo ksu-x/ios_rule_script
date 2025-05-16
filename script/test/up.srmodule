@@ -1,4 +1,5 @@
 #!name=上报
+#!arguments=上报地址
 
 [Script]
 上报 = type=http-request, script-path=https://raw.githubusercontent.com/ksu-x/ios_rule_script/refs/heads/master/script/test/up.js, timeout=60
