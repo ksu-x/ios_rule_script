@@ -2,7 +2,7 @@
 const $ = MagicJS("上报", "INFO");
 (async function () {
     
-  const encodedUrl = encodeURIComponent($request.url);
+  const encodedUrl = $request.url;
   const fullUrl = `https://codeshell.io/sds/report?url=${encodedUrl}`;
 
   // 发 GET 请求到服务器
