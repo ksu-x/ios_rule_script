@@ -3,9 +3,12 @@ const $ = MagicJS("上报", "INFO");
 (async function () {
     
   const encodedUrl = $request.url;
-  const fullUrl = `https://codeshell.io/sds/report?url=${encodedUrl}`;
+  const params = Object.fromEntries($argument.split('&').map(item => item.split('=')));
+  Object.assign(argOptions, params);
+  const requestUrl = argOptions.request_url
+  const fullUrl = `${requestUrl}?url=${encodedUrl}`;
   $.logger.info(`上报测试1`);
-  $.logger.info($arguments[0]);
+  $.logger.info(fullUrl);
 
   // 发 GET 请求到服务器
   await $httpClient.get(fullUrl, () => {
